@@ -1,0 +1,25 @@
+
+subprojects {
+    apply plugin: 'java'
+
+    targetCompatibility = JavaVersion.VERSION_1_8
+    sourceCompatibility = JavaVersion.VERSION_1_8
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+    dependencies {
+        compile 'org.slf4j:slf4j-api:1.7.21'
+        compile 'ch.qos.logback:logback-classic:1.1.7'
+        compile 'ch.qos.logback:logback-core:1.1.7'
+
+        testCompile 'junit:junit:4.12'
+    }
+
+    jar {
+        exclude('logback.xml')
+    }
+
+}

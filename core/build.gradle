@@ -1,0 +1,19 @@
+
+apply plugin: "maven-publish"
+
+jar {
+    baseName "jflux-core"
+}
+
+publishing {
+    publications {
+        jfluxCore(MavenPublication) {
+            groupId='org.jflux'
+            artifactId='jflux-core'
+            version '1.0'
+
+            from components.java
+        }
+    }
+}
+
